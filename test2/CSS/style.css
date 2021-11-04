@@ -1,0 +1,558 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    overflow-x: hidden;
+}
+
+/* ******************************* */
+/* GENERAL REUSABLE COMPONENTS */
+/* ******************************* */
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+.grid--1--col {
+    grid-template-columns: 1fr;
+}
+.grid--2--cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid--3--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid--4--cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid--5--cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container--1 {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+.container--2 {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.heading-secondary,
+.heading-tertiary,
+.heading-4,
+.heading-box {
+    line-height: 1.05;
+    color: #cf711f;
+    margin-bottom: 1.6rem;
+}
+.heading-secondary {
+    font-size: 3.2rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.heading-tertiary {
+    font-size: 2.6rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.section-hero,
+.section-our-parish,
+.section-organizations,
+.section-office-bearers,
+.section-gallery,
+.section-news-events {
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+/* ******************************* */
+/* HEADER SECTION */
+/* ******************************* */
+
+.header {
+    display: grid;
+    grid-template-columns: 15fr 85fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #fdf1e6;
+    height: 16rem;
+    padding: 0 4.8rem;
+}
+.logo-header {
+    width: 12rem;
+    height: 15rem;
+}
+.title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.title-name {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.title-name-sub {
+    font-size: 3rem;
+    font-weight: 500;
+}
+.title-sub {
+    font-size: 2rem;
+}
+
+/* ******************************* */
+/* NAV SECTION */
+/* ******************************* */
+
+.main-nav {
+    background-color: #f0b27a;
+    position: relative;
+
+    /* border-top: 1px solid #aaa; */
+}
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3.2rem;
+    padding: 1.8rem 0;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+    color: #cf711f;
+}
+
+/* MOBILE */
+
+.btn-mobile-nav {
+    position: absolute;
+    right: 0;
+    top: -0.5rem;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+}
+
+.icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+    display: none;
+}
+
+/* STICKY NAVIGATION */
+
+.sticky .main-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f0b27a;
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+.sticky .section-hero {
+    margin-top: 5.36rem;
+}
+
+/* ******************************* */
+/* HERO SECTION */
+/* ******************************* */
+.section-hero {
+    /* background-color: #; */
+    padding: 2rem 0 9.6rem 0;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 9.6rem;
+    align-items: center;
+}
+
+.hero-description {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+.hero-img {
+    width: 100%;
+}
+.worship-box {
+    /* margin: 0 auto; */
+    /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 1.1rem; */
+    margin-top: 4.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+}
+/* .heading-4 {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+} */
+.worship-schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.worship-day {
+    font-size: 1.8rem;
+}
+/* ******************************* */
+/* OUR PARISH SECTION */
+/* ******************************* */
+
+.section-our-parish {
+    padding: 7rem 0 9.6rem 0;
+}
+
+.our-parish-description {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+.catholicos,
+.metropolitan,
+.vicar {
+    padding: 2.8rem;
+    text-align: center;
+}
+.catholicos-text,
+.metropolitan-text,
+.vicar-text {
+    font-weight: 600;
+    /* padding: 1.2rem; */
+    margin-bottom: 1.2rem;
+}
+.catholicos-text {
+    font-size: 2.6rem;
+}
+
+.bava {
+    width: 30%;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.metropolitan-text,
+.vicar-text {
+    font-size: 2rem;
+}
+
+.uk-metropolitan {
+    width: 62.5%;
+    border-radius: 10px;
+}
+
+.church-vicar {
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* ******************************* */
+/* SPIRITUAL ORGANIZATION SECTION */
+/* ******************************* */
+
+.section-organizations {
+    /* background-color: #fdf1e6; */
+    padding: 7rem 0 9.6rem 0;
+}
+
+.organization-name {
+    /* font-size: 2.6rem;
+    line-height: 1.6; */
+    margin-bottom: 4.8rem;
+}
+
+.organization-box {
+    padding: 1.6rem;
+}
+
+.organization-description {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 2.2rem;
+}
+
+/* ******************************* */
+/* OFFICE BEARERS SECTION */
+/* ******************************* */
+
+.section-office-bearers {
+    /* background-color: #fdf1e6; */
+    padding: 7rem 0 9.6rem 0;
+}
+.office-bearers {
+    margin-bottom: 4.8rem;
+}
+
+.gallery-vicar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 1.2rem;
+}
+.gallery-img-vicar {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.7rem;
+}
+.gallery-item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.7rem;
+}
+
+.gallery-admin {
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+    justify-content: center;
+    align-items: center;
+}
+/* .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.8rem;
+} */
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.7rem;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.list {
+    list-style: none;
+}
+.list-item {
+    justify-self: center;
+}
+
+.list-position {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #cf711f;
+}
+
+.list-name {
+    font-size: 1.6rem;
+}
+
+/* ******************************* */
+/* GALLERY SECTION */
+/* ******************************* */
+.section-gallery {
+    padding: 7rem 0 9.6rem 0;
+}
+.gallery-link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.gallery-icon-img {
+    width: 15%;
+}
+.gallery-img-link:link,
+.gallery-img-link:visited {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: #555;
+}
+
+.gallery-main-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.gallery-box {
+    overflow: hidden;
+}
+
+.gallery-box img {
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+}
+.gallery-box img:hover {
+    transform: scale(1.1);
+}
+
+/* ******************************* */
+/* NEWS & EVENTS SECTION */
+/* ******************************* */
+.section-news-events {
+    padding: 7rem 0 9.6rem 0;
+}
+.upcoming-events-box,
+.latest-news-box {
+    padding: 4.8rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 1.1rem;
+}
+.heading-box {
+    font-size: 2rem;
+    line-height: 2.6;
+    border-bottom: 2px solid rgba(85, 85, 85, 0.4);
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+}
+.event {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.event-date,
+.event-location,
+.event-description {
+    font-size: 1.6rem;
+}
+hr {
+    margin-bottom: 2.8rem;
+}
+
+/* ******************************* */
+/* FOOTER SECTION */
+/* ******************************* */
+
+.footer {
+    padding: 5.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    gap: 5.6rem;
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 50%;
+}
+.copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #767676;
+    margin-top: auto;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #cf711f;
+    margin-bottom: 4rem;
+}
+.contacts {
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.tel-email {
+    margin-top: 1.2rem;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+
+    transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: #555;
+}
+
+.footer-link-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
